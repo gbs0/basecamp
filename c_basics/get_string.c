@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 11:17:43 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/03/31 14:10:39 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/03/31 19:27:16 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 void printName(char*);
 
 int main(void) {
-    printf("Enter your name: ");
-    char name[100];
-    gets(name);
+    char name[256];
+	printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
     printName(name);
     return (0);
 }
