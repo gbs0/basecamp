@@ -10,3 +10,5 @@ done
 
 # awk '{gsub(/\t/, ","); gsub(/,,/, ",-,"); gsub(/,,/, ",-,")
 echo "./ex02/find_sh.sh" | awk '{gsub(/[^\/]+/\.\./, ","); gsub(/\./, ""); gsub(/.sh/, ",-,");  system( "echo "  $0) }'
+
+ls  -1 | sed -e 's/\.sh$//'
