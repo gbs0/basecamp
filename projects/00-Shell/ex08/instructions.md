@@ -16,3 +16,5 @@ Precisamos rodar o arquivo gerado, assim veremos dois tipos de resultados p/ arq
 `file -m ft_magic.mgc 42_file`
 `$ file: 42 file`
 
+> Todos de uma vez:
+`file -m ft_magic.mgc *`
