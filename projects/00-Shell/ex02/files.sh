@@ -12,8 +12,10 @@
 # **************************************************************************** #
 
 # Creating all files once
+
 for i in $(seq 0 6)
 do
+  `rm -rf test${i}`
   if [ `touch -m -t 201906020730.00 test${i}` ]; then
   	echo "Error: Cannot create Files"
   else
@@ -21,49 +23,85 @@ do
   fi
 done
 
-# Edit File 0 Format/Acess
+# Edit File 0 Format/Acess -> -rwx--xr-x
 FILE_ZERO=./test0
 RMV_FILE_ZERO=`rm ./test0`
 CRT_DIR_ZERO=`mkdir test0`
+CHN_PERMISSION_ZERO=`chmod 715 ./test0`
 CHN_TIMESTAMP_ZERO=`touch -h -t 201906020730.00 test0`
-if [ -f "$FILE_ZERO" ]; then
-    echo "------- $FILE_ZERO exists! -------"
-	echo "-> Removing file..."
+if [ -d "$FILE_ZERO" ]; then
+	echo "-> Removing file in ${FILE_ZERO}..."
 	$RMV_FILE_ZERO
-	echo "-> Creating directory..."
 	$CRT_DIR_ZERO
-	echo "-> Ok, Changing Timestamp"
+	echo "-> Ok, Changing Permission..."
+	$CHN_PERMISSION_ZERO
 	$CHN_TIMESTAMP_ZERO
 	echo "Success in $FILE_ZERO"
 fi
 
-# Edit File 2 Format/Acess
+# Edit File 1 Execution Permission -> -rwx--xr--
+FILE_ONE=./test1
+CHN_PERMISSION_ONE=`chmod 714 $FILE_ONE`
+if [ -f "$FILE_ONE" ]; then
+	echo "-> Working in $FILE_ONE"
+	echo "-> Changing Permission..."
+	$CHN_PERMISSION_ONE
+	echo "Success in $FILE_ONE"
+fi
+
+# Edit File 2 Format/Access -> -r-x---r--
 FILE_TWO=./test2
 RMV_FILE_TWO=`rm ./test2`
 CRT_DIR_TWO=`mkdir test2`
-CHN_PERMISSION_TWO=`chmod 504 ./test2`
+CHN_PERMISSION_TWO=`chmod 504 $FILE_TWO`
 CHN_TIMESTAMP_TWO=`touch -h -t 201906020730.00 test2`
-if [ -f "$FILE_TWO" ] ; then
-    echo "------- $FILE_TWO exists! -------"
-	echo "-> Removing file..."
+if [ -d "$FILE_TWO" ]; then
+	echo "-> Removing file in ${FILE_TWO}..."
 	$RMV_FILE_TWO
-	echo "-> Creating directory..."
 	$CRT_DIR_TWO
-	echo "-> Changing N Permission..."
+	echo "-> Ok, Changing Permission..."
 	$CHN_PERMISSION_TWO
-	echo "-> Ok, Changing Timestamp"
 	$CHN_TIMESTAMP_TWO
+	echo "Success in $FILE_TWO"
 fi
 
-# Edit File 2 Format/Acess
+# Edit File 3 Only for Read -> -r-----r--
+FILE_THREE=./test3
+CHN_PERMISSION_THREE=`chmod 404 $FILE_THREE`
+if [ -f "$FILE_THREE" ]; then
+	echo "-> Working in $FILE_THREE"
+	echo "-> Ok, Changing ${FILE_THREE} Permission..."
+	$CHN_PERMISSION_THREE
+	echo "Success in $FILE_THREE"
+fi
+
+# Edit File 4 Execute only for X Group Permission -> -rw-r----x
+FILE_FOUR=./test4
+CHN_PERMISSION_FOUR=`chmod 641 $FILE_FOUR`
+if [ -f "$FILE_FOUR" ]; then
+	echo "-> Working in $FILE_FOUR"
+	echo "-> Ok, Changing ${FILE_FOUR} Permissions..."
+	$CHN_PERMISSION_FOUR
+	echo "Success in $FILE_FOUR"
+fi
+
+# Edit File 5 Read Only Permission -> -r-----r--
+FILE_FIVE=./test5
+CHN_PERMISSION_FIVE=`chmod 404 $FILE_FIVE`
+if [ -f "$FILE_FIVE" ]; then
+	echo "-> Working in $FILE_FIVE"
+	echo "-> Ok, Changing ${FILE_FIVE} Permissions..."
+	$CHN_PERMISSION_FIVE
+	echo "Success in $FILE_FIVE"
+fi
+
+# Recursive Synmlink File 6 | test6 -> test0
 FILE_SIX=./test6
 RMV_FILE_SIX=`rm ./test6`
 SYM_FILE_SIX=`ln -sf test0 ./test6`
 CHN_TIMESTAMP_SIX=`touch -h -t 201906020730.00 test6`
-
-if [ -f "$FILE_SIX" ]; then
-    echo "------- $FILE_SIX exists! -------"
-	echo "-> Removing file..."
+if [ -d "$FILE_SIX" ]; then
+	echo "-> Removing file in ${FILE_SIX}..."
 	$RMV_FILE_SIX
 	echo "-> Symlink test0 directory in -> ./test6/"
 	$SYM_FILE_SIX
@@ -72,3 +110,22 @@ if [ -f "$FILE_SIX" ]; then
 	echo "Success in $FILE_SIX"
 fi
 
+# Creating remaining Hardlinks
+# FILE_FIVE=./test5
+# RMV_FILE=`rm test5`
+# CRT_HARDLINK_THREE=`ln ./test3 ./test5`
+# CHN_PERMISSION_FIVE=`chmod 404 ./test5`
+# if [ -f "$FILE_FIVE" ]; then
+# 	echo "-> Removing file in ${FILE_FIVE}..."
+# 	$RMV_FILE
+# 	echo "-> Creating Hardlink test3 -> test5"
+# 	$CRT_HARDLINK_THREE
+# 	echo "-> Ok, Changing ${FILE_FIVE} Permissions..."
+# 	$CHN_PERMISSION_FIVE
+# 	echo "Success in $FILE_FIVE"
+# fi
+
+# Execute final shell operation
+# echo "$(ls -l)"
+
+# echo "$(tar -cf exo2.tar *)"
