@@ -8,6 +8,6 @@ done
 echo $(`echo " " >> testShell00`)
 
 echo $(`chmod 455 testShell00`)
-echo $(`touch -t 202106020730.00 $FILE`)
+echo $(`touch -t 202106010730.00 $FILE`)
 echo $(`tar -cf testShell00.tar testShell00`)
 echo "Done!"
