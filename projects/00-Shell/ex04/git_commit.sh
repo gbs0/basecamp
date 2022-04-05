@@ -1,1 +1,1 @@
-echo $(`git log --pretty=format:"%H" --date=short -n5`)
+git log --format="%H" --date=short -n5
