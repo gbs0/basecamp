@@ -39,5 +39,9 @@ Iremos modificar a data de criação do arquivo `.tar`, com isso, vamos precisar
 
 O padrão gerado segue a regra do uso de Timestamps como registro da data e horário utilizados no sistema.
 
-
 [Referência]("https://www.putorius.net/how-to-use-the-linux-touch-command-with-examples.html")
+
+##### Popular o arquivo com 40 caracteres
+Para adicionar 39 caracteres (pois a linha é contada como um caractere), rodamos o seguinte comando:
+
+`echo $(`seq 1 39`) >> ./testShell00`
