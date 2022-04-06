@@ -11,4 +11,4 @@
 #                                                                              #
 # **************************************************************************** #
 
-find ../ -type f | git check-ignore --stdin
+git ls-files --others -i --exclude-standard
