@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 19:03:18 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/04/07 14:11:34 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/04/07 14:23:40 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ void ft_print_alphabet(void)
     }
 }
 
-int main(void) { };
