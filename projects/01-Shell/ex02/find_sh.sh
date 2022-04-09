@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-find .  -type f -name "*.sh" | sed -e 's/\.sh$//'  | awk '{ gsub("./", ""); system( "echo "  $0) }'
+find . -type f -name "*.sh" | cut -d "/"  -f2 | cut -d "." -f1
