@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 19:51:29 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/04/07 19:51:32 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/04/08 16:47:05 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,8 @@ void ft_print_reverse_alphabet(void)
         write(1, &word, 1);
         word--;
     }
+}
+
+int main(void) {
+	ft_print_reverse_alphabet();
 }
