@@ -6,24 +6,20 @@
 /*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 19:51:29 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/04/08 16:47:05 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/04/11 13:19:20 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_reverse_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
-    char word;
+	char	word;
 
-    word = 'z';
-    while (word >= 'a')
-    {
-        write(1, &word, 1);
-        word--;
-    }
-}
-
-int main(void) {
-	ft_print_reverse_alphabet();
+	word = 'z';
+	while (word >= 'a')
+	{
+		write(1, &word, 1);
+		word--;
+	}
 }
