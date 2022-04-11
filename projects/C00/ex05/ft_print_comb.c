@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:11:58 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/04/11 17:12:04 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/04/11 17:12:58 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ void ft_print_comb(void)
     
 }
 
-int main(void) {
-    // ft_print_comb();
-    ft_print_dozens();
-    return (0);
-}
+// int main(void) {
+//     // ft_print_comb();
+//     ft_print_dozens();
+//     return (0);
+// }
