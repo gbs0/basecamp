@@ -1,12 +1,22 @@
-// Header 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/11 22:55:47 by gschiavo          #+#    #+#             */
+/*   Updated: 2022/04/11 22:58:27 by gschiavo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_swap(int *a, int *b) {
-    int temp;
+void	ft_swap(int *a, int *b)
+{
+	int		temp;
 
-    temp = *a;
-    *a = *b;
-    *b = temp;
-
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
