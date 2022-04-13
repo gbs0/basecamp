@@ -6,22 +6,22 @@
 /*   By: gbs0 <gbs0@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 14:48:28 by gbs0              #+#    #+#             */
-/*   Updated: 2022/04/13 14:50:42 by gbs0             ###   ########.fr       */
+/*   Updated: 2022/04/13 15:29:36 by gbs0             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char *ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
-    int i;
+	int		i;
 
-    i = 0;
-    while (str[i])
-    {
-        if (str[i] >= 'a' && str[i] <= 'z')
-            str[i] -= 32;
-        i++;
-    }
-    return (str);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
 }
