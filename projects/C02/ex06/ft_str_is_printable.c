@@ -1,25 +1,34 @@
-// Header
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gbs0 <gbs0@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/13 15:30:53 by gbs0              #+#    #+#             */
+/*   Updated: 2022/04/13 15:31:59 by gbs0             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_str_is_printable(char *str)
+int	ft_str_is_printable(char *str)
 {
-    int i;
-    
-    i = 0;
-    
-    if (*str == '\0')
-        return (1);
-    
-    while(*str != '\0')
-    {
-        if (*str >= 32 && *str <= 126)
-        {
-            str++;
-        } else {
-            return (0);
-        }
-    }
-    
-    return(1);
+	int		i;
+
+	i = 0;
+	if (*str == '\0')
+		return (1);
+	while (*str != '\0')
+	{
+		if (*str >= 32 && *str <= 126)
+		{
+			str++;
+		}
+		else
+		{
+			return (0);
+		}
+	}
+	return (1);
 }
