@@ -1,4 +1,4 @@
 #! /usr/bin bash
 
-cat /etc/passwd | grep --invert-match "^#" | sed -n "p;n" | cut -d : -f 1 | rev | sort -r | awk "NR>=$FT_LINE1 && NR<=$FT_LINE2" | tr "\n" "," | sed 's/,/, /g' | sed 's/, $/./'
+cat /etc/passwd | grep -v "#" | sed -n '0~2p' | sort | cut -d : -f1 | rev | sort -r | sed -n "$FT_LINE1,$FT_LINE2 p" | tr "\n" "," | tr "\n" "," | sed 's/,/, /g' | sed 's/, $/./'
 
