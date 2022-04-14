@@ -8,3 +8,5 @@
 
  #### Mudando as permissões do arquivo -> rw---xr--
 `chmod 614 \"\\\?\$\*"'"MaRViN"'"*\$\?\\\"`
+
+'"\?$*'\''MaRViN'\''*$?\"'
