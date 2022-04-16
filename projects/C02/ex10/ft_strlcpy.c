@@ -25,12 +25,13 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int dstsize)
 	}
 	if (dstsize == 0)
 		return (i);
-	while (src[len] && len < dstsize)
+	while (src[len] != '\0' && len < dstsize - 1)
 	{
 		dest[len] = src[len];
 		len++;
 	}
-	dest[i] += '\0';
+	if (dstsize)
+		dest[len] = '\0';
 	return (i);
 }
 
