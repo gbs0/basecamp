@@ -38,8 +38,10 @@ void	ft_putnbr(int nb)
 		return ;
 	}
 	if (nb == 0)
+	{
 		ft_putchar(0);
-	if (nb <= 0)
+	}
+	if (nb < 0)
 	{
 		ft_putchar('-');
 		nb = -nb;

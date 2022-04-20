@@ -6,7 +6,9 @@ void	ft_putnbr(int nb);
 
 int	main(void)
 {
-	write(1, "-1: ", 4);
+	write(1, "0: ", 4);
+	ft_putnbr(0);
+	write(1, "\n-1: ", 4);
 	ft_putnbr(-1);
 	write(1, "\n1: ", 4);
 	ft_putnbr(1);
