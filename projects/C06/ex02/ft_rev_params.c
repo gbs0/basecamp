@@ -6,11 +6,12 @@
 /*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 17:15:52 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/04/22 17:40:28 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/05 11:24:34 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -33,12 +34,12 @@ int	main(int argc, char **argv)
 {
 	int	args;
     
-	args = 0;
-	while (args < argc)
+	args = argc;
+	while (args > 1)
 	{
-		ft_putstr(argv[args]);
+		ft_putstr(argv[args - 1]);
 		ft_putchar('\n');
-		args++;
+		args--;
 	}
 	return (0);
 }
