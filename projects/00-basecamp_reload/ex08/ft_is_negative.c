@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/23 19:51:35 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/23 13:34:13 by gschiavo         ###   ########.fr       */
+/*   Created: 2022/05/23 19:51:55 by gschiavo          #+#    #+#             */
+/*   Updated: 2022/05/23 13:37:57 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,18 @@ void	ft_putchar(char s)
 	write(1, &s, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_is_negative(int n)
 {
-	char	number;
-
-	number = '0';
-	while (number <= '9')
+	if (n < 0)
 	{
-		ft_putchar(number);
-		number++;
+		ft_putchar("N");
+	}
+	else if (n == NULL)
+	{
+		ft_putchar("P");
+	}
+	else
+	{
+		ft_putchar("P");
 	}
 }
