@@ -12,6 +12,11 @@
 
 #include <unistd.h>
 
+void	ft_putchar(char s)
+{
+	write(1, &s, 1);
+}
+
 void	ft_print_alphabet(void)
 {
 	char	word;
@@ -19,7 +24,7 @@ void	ft_print_alphabet(void)
 	word = 'a';
 	while (word <= 'z')
 	{
-		write(1, &word, 1);
+		ft_putchar(word);
 		word++;
 	}
 }
