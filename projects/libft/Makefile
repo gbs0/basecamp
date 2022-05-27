@@ -5,7 +5,8 @@ FLAGS=-Wall -Wextra -Werror
 DISPLAY=display/ft_putnbr.c \
 	display/ft_putchar.c \
 	display/ft_putchar_fd.c \
-	display/ft_putstr.c 
+	display/ft_putstr.c \
+	display/ft_putstr_fd.c
 CHECKER=checker/ft_islower.c \
 	checker/ft_isupper.c \
 	checker/ft_isalnum.c \
