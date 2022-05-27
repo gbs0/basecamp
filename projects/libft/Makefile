@@ -3,6 +3,7 @@ NAME= libft.a
 FLAGS=-Wall -Wextra -Werror
 
 DISPLAY=display/ft_putnbr.c \
+	display/ft_putnbr_fd.c \
 	display/ft_putchar.c \
 	display/ft_putchar_fd.c \
 	display/ft_putstr.c \
