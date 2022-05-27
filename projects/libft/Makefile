@@ -4,6 +4,7 @@ FLAGS=-Wall -Wextra -Werror
 
 DISPLAY=display/ft_putnbr.c \
 	display/ft_putchar.c \
+	display/ft_putchar_fd.c \
 	display/ft_putstr.c 
 CHECKER=checker/ft_islower.c \
 	checker/ft_isupper.c \
@@ -37,7 +38,7 @@ SRCS=$(addprefix $(SRC_PATH), $(SRC))
 
 OBJ= $(SRCS:.c=.o)
 
-INC=-I./inc
+INC=-I./include
 
 all: $(NAME)
 
