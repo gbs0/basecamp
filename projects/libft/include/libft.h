@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/28 19:18:54 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/28 19:23:03 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_list
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
+int				ft_isprint(int c);
 
 /*
 ** ==== convert ====
