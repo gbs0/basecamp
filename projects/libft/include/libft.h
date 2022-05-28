@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/28 19:23:03 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/28 19:25:57 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@
 # include <unistd.h>
 # include <limits.h>
 
-typedef unsigned char	t_uchar;
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
+/*
+** ==== BONUS Part ====
+*/
+// typedef unsigned char	t_uchar;
+// typedef struct s_list
+// {
+// 	void			*content;
+// 	struct s_list	*next;
+// }				t_list;
 
 /*
 ** ==== memory management ====
