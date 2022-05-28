@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/28 19:06:32 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/28 19:14:04 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ typedef struct s_list
 /*
 ** ==== checker ====
 */
-int				ft_isdigit(int c);
 int				ft_isalpha(int c);
+int				ft_isdigit(int c);
 
 /*
 ** ==== convert ====
