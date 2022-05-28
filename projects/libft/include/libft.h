@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/28 19:25:57 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/28 19:27:40 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@
 ** ==== checker ====
 */
 int				ft_isalpha(int c);
+int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isprint(int c);
