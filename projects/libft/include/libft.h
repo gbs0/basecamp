@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/29 17:20:53 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/30 11:40:20 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@
 */
 void			ft_bzero(void *s, size_t n);
 void			*ft_memset(void *b, int c, size_t len);
+void			*ft_memcpy(void *dst, const void *src, size_t n);
+void			*ft_calloc(size_t count, size_t size);
+void			*ft_memmove(void *dst, const void *src, size_t len);
 
 /*
 ** ==== checker ====
