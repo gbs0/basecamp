@@ -21,7 +21,7 @@ CONVERT=convert/ft_tolower.c \
 	convert/ft_atoi.c
 MEMORY=memory/ft_bzero.c \
 	memory/ft_calloc.c \
-	memory/ft_memccpy.c \
+	memory/ft_memcpy.c \
 	memory/ft_memchr.c \
 	memory/ft_memcmp.c \
 	memory/ft_memmove.c
