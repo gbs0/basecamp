@@ -24,8 +24,7 @@ MEMORY=memory/ft_bzero.c \
 	memory/ft_memccpy.c \
 	memory/ft_memchr.c \
 	memory/ft_memcmp.c \
-	memory/ft_memmove.c \
-	memory/ft_memset.c
+	memory/ft_memmove.c
 STRING=string/ft_strchr.c \
 	string/ft_strlcat.c \
 	string/ft_strlcpy.c \
