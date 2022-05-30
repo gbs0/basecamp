@@ -31,7 +31,8 @@ STRING=string/ft_strchr.c \
 	string/ft_strlen.c \
 	string/ft_strncmp.c \
 	string/ft_strnstr.c \
-	string/ft_strcmp.c 
+	string/ft_strcmp.c \
+	string/ft_strdup.c
 
 
 SRC_PATH=./src/
