@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/29 16:54:46 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/29 17:20:53 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@
 /*
 ** ==== memory management ====
 */
+void			ft_bzero(void *s, size_t n);
+void			*ft_memset(void *b, int c, size_t len);
 
 /*
 ** ==== checker ====
@@ -62,5 +64,6 @@ void			ft_putendl_fd(char *s, int fd);
 */
 char			*ft_strchr(const char *s, int c);
 size_t			ft_strlen(const char *str);
-
+size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 #endif
