@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/30 11:40:20 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/30 11:47:23 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,5 @@ char			*ft_strchr(const char *s, int c);
 size_t			ft_strlen(const char *str);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
+char			*ft_strdup(const char *s1);
 #endif
