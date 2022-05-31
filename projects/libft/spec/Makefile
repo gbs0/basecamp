@@ -6,7 +6,7 @@
 #    By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2022/05/31 12:18:01 by gschiavo         ###   ########.fr        #
+#    Updated: 2022/05/31 14:43:13 by gschiavo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 ##################### 			D E F I N E				#####################
 CC					= clang++
 CFLAGS				= -g3 -ldl -std=c++11 -I utils/ -I$(PATH_LIBFT) 
-PATH_LIBFT			= ../../
+PATH_LIBFT			= ../
 TESTER_PATH			= srcs/
 TESTER_PATH_BONUS	= srcs/bonus/
 FOR_ALL				= $(addprefix common/, infos.cpp sig_handler.cpp tripouille_leaks.cpp free_tabs.cpp)
