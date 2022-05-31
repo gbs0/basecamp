@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 11:28:54 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/30 11:38:07 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/31 11:14:27 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t        i;
-	unsigned char *dst_c;
-	unsigned char *src_c;
+	size_t			i;
+	unsigned char	*dst_c;
+	unsigned char	*src_c;
 
 	i = 0;
 	if (!dst && !src)
