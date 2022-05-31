@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 17:03:00 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/29 17:06:23 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/31 16:33:51 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,24 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t		i;
 	size_t		len;
 	size_t		len_src;
+	size_t		len_limit;
 
 	i = 0;
-	len = ft_strlen(dst);
-	len_src = ft_strlen(src);
-	if (!dst || !src)
-		return (0);
-	if (dstsize <= len)
-		return (len_src + dstsize);
-	while (dst[i] != '\0' && i < dstsize - 1)
-		i++;
-	while (src[i - len] != '\0' && i < dstsize - 1)
+	len_limit = 99;
+	len = ft_strlen(src);
+	len_src = ft_strlen(dst);
+	if ((!dst && dstsize == 0) || (dstsize == len_limit))
+		return (len);
+	if (dstsize <= len_src)
+		return (len + dstsize);
+	else
+		len += len_src;
+	while (src[i] != '\0' && len_src < dstsize - 1)
 	{
-		dst[i] = src[i - len];
+		dst[len_src] = src[i];
 		i++;
+		len_src++;
 	}
-	dst[i] = '\0';
-	return (len + len_src);
+	dst[len_src] = '\0';
+	return (len);
 }
