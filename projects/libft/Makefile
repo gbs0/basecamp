@@ -9,9 +9,7 @@ DISPLAY=display/ft_putnbr.c \
 	display/ft_putstr.c \
 	display/ft_putstr_fd.c \
 	display/ft_putendl_fd.c
-CHECKER=checker/ft_islower.c \
-	checker/ft_isupper.c \
-	checker/ft_isalnum.c \
+CHECKER=checker/ft_isalnum.c \
 	checker/ft_isalpha.c \
 	checker/ft_isascii.c \
 	checker/ft_isdigit.c \
