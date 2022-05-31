@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   toupper.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:09:05 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/08 14:00:33 by trofidal         ###   ########.fr       */
+/*   Updated: 2022/05/31 12:19:31 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 extern "C" {
 #define new bar
-#include "../../libft.h"
+#include "../../../inc/libft.h"
 #undef new
 };
 
