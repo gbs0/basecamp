@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:51:10 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/29 16:55:08 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/31 12:16:58 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	if (!str)
+	if (!s)
 		return (0);
 	while (s[i] != '\0')
 		i++;
