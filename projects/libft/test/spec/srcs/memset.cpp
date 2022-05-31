@@ -6,13 +6,13 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:55:23 by trofidal          #+#    #+#             */
-/*   Updated: 2022/05/31 12:19:31 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/05/31 14:37:00 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 extern "C" {
 #define new bar
-#include "../../../inc/libft.h"
+#include "include/libft.h"
 #undef new
 };
 
