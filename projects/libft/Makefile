@@ -27,7 +27,8 @@ STRING=string/ft_strchr.c \
 	string/ft_strlcat.c \
 	string/ft_strlcpy.c \
 	string/ft_strlen.c \
-	string/ft_strdup.c
+	string/ft_strdup.c \
+	string/ft_strnstr.c
 
 
 SRC_PATH=./src/
