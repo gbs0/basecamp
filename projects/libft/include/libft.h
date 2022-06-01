@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/31 11:22:48 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/01 11:30:56 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void			ft_putendl_fd(char *s, int fd);
 /*
 ** ==== string manipulation ====
 */
+char			*ft_strnstr(const char *src, const char *sub, size_t len);
 char			*ft_strchr(const char *s, int c);
 size_t			ft_strlen(const char *str);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
