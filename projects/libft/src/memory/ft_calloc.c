@@ -6,13 +6,13 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 11:10:24 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/30 11:22:27 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/01 15:04:51 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void	*dest;
 
