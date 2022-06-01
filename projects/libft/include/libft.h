@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/01 11:30:56 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/01 14:08:29 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int				ft_isprint(int c);
 /*
 ** ==== convert ====
 */
+int				ft_atoi(const char *str);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 
