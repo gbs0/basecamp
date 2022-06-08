@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/08 14:38:58 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/08 17:48:56 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,5 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char			*ft_strjoin(char const *s1, char const *s2);
 char			**ft_split(char const *s, char c);
+void 			ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
