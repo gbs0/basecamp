@@ -37,7 +37,8 @@ STRING=string/ft_strchr.c \
 	string/ft_substr.c \
 	string/ft_split.c \
 	string/ft_strtrim.c \
-	string/ft_strmapi.c
+	string/ft_strmapi.c \
+	string/ft_striteri.c
 
 
 SRC_PATH=./src/
