@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:29:41 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/05/27 17:02:34 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/09 12:40:13 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,12 @@ void	ft_putnbr_fd(int n, int fd)
 	long	nb;
 
 	nb = n;
-	if (n < 0)
+	if (nb < 0)
 	{
 		ft_putchar_fd('-', fd);
-		nb = -n;
+		nb *= -1;
 	}
-	if (nb < 10)
-	{
-		ft_putchar_fd(nb + '0', fd);
-		return ;
-	}
-	else
-	{
+	if (nb >= 10)
 		ft_putnbr_fd(nb / 10, fd);
-		ft_putnbr_fd(nb % 10, fd);
-	}
+	ft_putchar_fd((nb % 10) + '0', fd);
 }
