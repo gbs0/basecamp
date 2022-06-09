@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/08 17:48:56 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/09 11:20:54 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,7 @@
 # include <limits.h>
 
 /*
-** ==== BONUS Part ====
-*/
-// typedef unsigned char	t_uchar;
-// typedef struct s_list
-// {
-// 	void			*content;
-// 	struct s_list	*next;
-// }				t_list;
-
-/*
-** ==== memory management ====
+** ==== Memory Management ====
 */
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			ft_bzero(void *s, size_t n);
@@ -39,7 +29,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_calloc(size_t count, size_t size);
 
 /*
-** ==== checker ====
+** ==== Checkers/Validators ====
 */
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
@@ -48,7 +38,7 @@ int				ft_isalnum(int c);
 int				ft_isprint(int c);
 
 /*
-** ==== convert ====
+** ==== Convertion ====
 */
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
@@ -56,7 +46,7 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 
 /*
-** ==== display ====
+** ==== Display Functions ====
 */
 void			ft_putchar(char c);
 void			ft_putstr(char *s);
@@ -67,10 +57,9 @@ void			ft_putnbr_fd(int n, int fd);
 void			ft_putendl_fd(char *s, int fd);
 
 /*
-** ==== string manipulation ====
+** ==== String Manipulation ====
 */
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-// int				ft_strcmp(const char *s1, const char *s2);
 char	        *ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *src, const char *sub, size_t len);
 char			*ft_strchr(const char *s, int c);
