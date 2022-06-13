@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/09 11:20:54 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/13 12:41:56 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void			ft_putendl_fd(char *s, int fd);
 ** ==== String Manipulation ====
 */
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-char	        *ft_strrchr(const char *s, int c);
+char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *src, const char *sub, size_t len);
 char			*ft_strchr(const char *s, int c);
 size_t			ft_strlen(const char *str);
@@ -72,5 +72,5 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char			*ft_strjoin(char const *s1, char const *s2);
 char			**ft_split(char const *s, char c);
-void 			ft_striteri(char *s, void (*f)(unsigned int, char*));
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
