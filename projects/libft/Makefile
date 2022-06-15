@@ -39,10 +39,18 @@ STRING=string/ft_strchr.c \
 	string/ft_strtrim.c \
 	string/ft_strmapi.c \
 	string/ft_striteri.c
-
+LIST=list/ft_lstadd_front.c \
+	list/ft_lstadd_back.c \
+	list/ft_lstclear.c \
+	list/ft_lstdelone.c \
+	list/ft_lstiter.c \
+	list/ft_lstlast.c \
+	list/ft_lstmap.c \
+	list/ft_lstnew.c \
+	list/ft_lstsize.c
 
 SRC_PATH=./src/
-SRC=$(DISPLAY) $(CHECKER) $(CONVERT) $(MEMORY) $(STRING)
+SRC=$(DISPLAY) $(CHECKER) $(CONVERT) $(MEMORY) $(STRING) $(LIST)
 SRCS=$(addprefix $(SRC_PATH), $(SRC))
 
 OBJ= $(SRCS:.c=.o)
@@ -67,4 +75,4 @@ fclean: clean
 	
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
