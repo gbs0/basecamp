@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/14 16:13:41 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/20 10:54:10 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef unsigned char	t_byte;
 typedef unsigned short	t_ushort;
 typedef unsigned long	t_ulong;
 typedef unsigned char	t_uchar;
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
