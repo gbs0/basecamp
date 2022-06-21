@@ -39,15 +39,15 @@ STRING=string/ft_strchr.c \
 	string/ft_strtrim.c \
 	string/ft_strmapi.c \
 	string/ft_striteri.c
-LIST=list/ft_lstadd_front.c \
-	list/ft_lstadd_back.c \
-	list/ft_lstclear.c \
-	list/ft_lstdelone.c \
-	list/ft_lstiter.c \
-	list/ft_lstlast.c \
-	list/ft_lstmap.c \
-	list/ft_lstnew.c \
-	list/ft_lstsize.c
+LIST=list/ft_lstadd_front_bonus.c \
+	list/ft_lstadd_back_bonus.c \
+	list/ft_lstclear_bonus.c \
+	list/ft_lstdelone_bonus.c \
+	list/ft_lstiter_bonus.c \
+	list/ft_lstlast_bonus.c \
+	list/ft_lstmap_bonus.c \
+	list/ft_lstnew_bonus.c \
+	list/ft_lstsize_bonus.c
 
 SRC_PATH=./src/
 SRC=$(DISPLAY) $(CHECKER) $(CONVERT) $(MEMORY) $(STRING) $(LIST)
