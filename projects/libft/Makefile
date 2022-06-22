@@ -2,54 +2,54 @@ NAME= libft.a
 
 FLAGS=-Wall -Wextra -Werror
 
-DISPLAY=display/ft_putnbr.c \
-	display/ft_putnbr_fd.c \
-	display/ft_putchar.c \
-	display/ft_putchar_fd.c \
-	display/ft_putstr.c \
-	display/ft_putstr_fd.c \
-	display/ft_putendl_fd.c
-CHECKER=checker/ft_isalnum.c \
-	checker/ft_isalpha.c \
-	checker/ft_isascii.c \
-	checker/ft_isdigit.c \
-	checker/ft_isprint.c
-CONVERT=convert/ft_tolower.c \
-	convert/ft_toupper.c \
-	convert/ft_atoi.c \
-	convert/ft_itoa.c
-MEMORY=memory/ft_bzero.c \
-	memory/ft_calloc.c \
-	memory/ft_memcpy.c \
-	memory/ft_memchr.c \
-	memory/ft_memcmp.c \
-	memory/ft_memmove.c \
-	memory/ft_memset.c
-STRING=string/ft_strchr.c \
-	string/ft_strlcat.c \
-	string/ft_strlcpy.c \
-	string/ft_strlen.c \
-	string/ft_strdup.c \
-	string/ft_strnstr.c \
-	string/ft_strrchr.c \
-	string/ft_strncmp.c \
-	string/ft_strjoin.c \
-	string/ft_substr.c \
-	string/ft_split.c \
-	string/ft_strtrim.c \
-	string/ft_strmapi.c \
-	string/ft_striteri.c
-LIST=list/ft_lstadd_front_bonus.c \
-	list/ft_lstadd_back_bonus.c \
-	list/ft_lstclear_bonus.c \
-	list/ft_lstdelone_bonus.c \
-	list/ft_lstiter_bonus.c \
-	list/ft_lstlast_bonus.c \
-	list/ft_lstmap_bonus.c \
-	list/ft_lstnew_bonus.c \
-	list/ft_lstsize_bonus.c
+DISPLAY=ft_putnbr.c \
+	ft_putnbr_fd.c \
+	ft_putchar.c \
+	ft_putchar_fd.c \
+	ft_putstr.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c
+CHECKER=ft_isalnum.c \
+	ft_isalpha.c \
+	ft_isascii.c \
+	ft_isdigit.c \
+	ft_isprint.c
+CONVERT=ft_tolower.c \
+	ft_toupper.c \
+	ft_atoi.c \
+	ft_itoa.c
+MEMORY=ft_bzero.c \
+	ft_calloc.c \
+	ft_memcpy.c \
+	ft_memchr.c \
+	ft_memcmp.c \
+	ft_memmove.c \
+	ft_memset.c
+STRING=ft_strchr.c \
+	ft_strlcat.c \
+	ft_strlcpy.c \
+	ft_strlen.c \
+	ft_strdup.c \
+	ft_strnstr.c \
+	ft_strrchr.c \
+	ft_strncmp.c \
+	ft_strjoin.c \
+	ft_substr.c \
+	ft_split.c \
+	ft_strtrim.c \
+	ft_strmapi.c \
+	ft_striteri.c
+LIST=ft_lstadd_front.c \
+	ft_lstadd_back.c \
+	ft_lstclear.c \
+	ft_lstdelone.c \
+	ft_lstiter.c \
+	ft_lstlast.c \
+	ft_lstmap.c \
+	ft_lstnew.c \
+	ft_lstsize.c
 
-SRC_PATH=./src/
+SRC_PATH=./
 SRC=$(DISPLAY) $(CHECKER) $(CONVERT) $(MEMORY) $(STRING) $(LIST)
 SRCS=$(addprefix $(SRC_PATH), $(SRC))
 
