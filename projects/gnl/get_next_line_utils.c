@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 19:59:50 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/23 20:49:56 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/23 20:58:28 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,32 @@ char	*ft_strchr(char *str, int c)
 		i++;
 	}
 	return (NULL);
+}
+
+char	*ft_buffer_join(char *s1, char *s2)
+{
+	size_t	str_size;
+	size_t	i;
+	size_t	j;
+	char	*dst;
+
+	i = 0;
+	j = 0;
+	str_size = ft_strlen(s1) + ft_strlen(s2);
+	if (!s1 && !s2)
+		return (NULL);
+	dst = ft_alloc(str_size + 1, sizeof(char));
+	while (s1 && s1[i])
+	{
+		dst[i] = s1[i];
+		i++;
+	}
+	while (s2 && s2[j])
+	{
+		dst[i + j] = s2[j];
+		j++;
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }
