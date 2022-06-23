@@ -1,4 +1,5 @@
-NAME= libft.a
+NAME=libft.a
+NAME_B=libft_bonus.a
 
 FLAGS=-Wall -Wextra -Werror
 
@@ -64,14 +65,21 @@ $(NAME): $(OBJ)
 	ar rc $(NAME) $^
 	ranlib $(NAME)
 
+$(NAME_B): $(OBJ)
+	echo "Compiling lib..."
+	ar rc $(NAME_B) $^
+	ranlib $(NAME_B)
+
 %.o: %.c
 	gcc $(FLAGS) $(INC) -o $@ -c $<
 
 clean:
 	rm -f $(OBJ)
 
+bonus: $(NAME_B)
+
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(NAME_B)
 	
 re: fclean all
 
