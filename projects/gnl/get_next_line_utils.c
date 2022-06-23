@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 19:59:50 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/23 20:46:32 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/23 20:49:56 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,20 @@ char	*ft_alloc(size_t mem, size_t size)
 		i++;
 	}
 	return (buffer);
+}
+
+char	*ft_strchr(char *str, int c)
+{
+	size_t	i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (&str[i]);
+		i++;
+	}
+	return (NULL);
 }
