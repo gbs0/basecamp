@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 19:59:50 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/23 20:58:28 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/24 13:51:20 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char	*ft_buffer_join(char *s1, char *s2)
 	}
 	while (s2 && s2[j])
 	{
-		dst[i + j] = s2[j];
+		dst[i] = s2[j];
 		j++;
 		i++;
 	}
