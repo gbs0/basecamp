@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 19:59:46 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/23 21:42:48 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/24 13:41:21 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*offset(char *buffer)
 	if (!new_buffer)
 		return (NULL);
 	while (buffer[shift])
-		new_buffer[++i] = buffer[shift++];
+		new_buffer[++i] = buffer[++shift];
 	new_buffer[++i] = '\0';
 	free(buffer);
 	buffer = NULL;
@@ -80,7 +80,7 @@ char	*buffer_handler(char *buffer, int fd)
 	while (!ft_strchr(buffer, '\n') && ref_bytes != 0)
 	{
 		ref_bytes = read(fd, temp, BUFFER_SIZE);
-		if (0 > ref_bytes)
+		if (ref_bytes < 0)
 		{
 			free(temp);
 			return (NULL);
