@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 19:59:46 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/23 21:33:01 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/23 21:42:48 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,24 @@ char	*buffer_handler(char *buffer, int fd)
 	}
 	free(temp);
 	return (buffer);
+}
+
+char	*get_next_line(int fd)
+{
+	static char	*buffer[MAX_FD_SIZE];
+	char		*line;
+
+	line = NULL;
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= MAX_FD_SIZE)
+		return (NULL);
+	buffer[fd] = buffer_handler(buffer[fd], fd);
+	line = get_breakline(buffer[fd]);
+	buffer[fd] = offset(buffer[fd]);
+	if (!buffer[fd])
+	{
+		free(buffer[fd]);
+		buffer[fd] = NULL;
+		return (buffer[fd]);
+	}
+	return (line);
 }
