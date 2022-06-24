@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 19:19:49 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/23 20:42:33 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/23 20:52:59 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ char	*get_next_line(int fd);
 char	*ft_strchr(char *str, int c);
 int		ft_strlen(char *str);
 char	*ft_alloc(size_t mem, size_t size);
-char	*ft_new_buffer(char *s1, char *s2);
+char	*ft_buffer_join(char *s1, char *s2);
 #endif
