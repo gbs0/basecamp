@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/20 10:54:10 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/27 12:21:20 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@
 # include <unistd.h>
 # include <limits.h>
 
-typedef unsigned char	t_byte;
-typedef unsigned short	t_ushort;
-typedef unsigned long	t_ulong;
-typedef unsigned char	t_uchar;
 typedef struct s_list
 {
 	void			*content;
@@ -51,6 +47,7 @@ int				ft_isprint(int c);
 */
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
+char			*ft_utoa(unsigned int n);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 
