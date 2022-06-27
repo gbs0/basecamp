@@ -3,11 +3,8 @@ NAME_B=libft_bonus.a
 
 FLAGS=-Wall -Wextra -Werror
 
-DISPLAY=ft_putnbr.c \
-	ft_putnbr_fd.c \
-	ft_putchar.c \
+DISPLAY= ft_putnbr_fd.c \
 	ft_putchar_fd.c \
-	ft_putstr.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c
 CHECKER=ft_isalnum.c \
