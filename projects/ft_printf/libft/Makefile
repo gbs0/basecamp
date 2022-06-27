@@ -18,7 +18,8 @@ CHECKER=ft_isalnum.c \
 CONVERT=ft_tolower.c \
 	ft_toupper.c \
 	ft_atoi.c \
-	ft_itoa.c
+	ft_itoa.c \
+	ft_utoa.c
 MEMORY=ft_bzero.c \
 	ft_calloc.c \
 	ft_memcpy.c \
