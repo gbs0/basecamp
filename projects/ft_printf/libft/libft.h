@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 15:19:08 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/27 12:21:20 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/27 15:13:45 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,13 @@ int				ft_isprint(int c);
 */
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
-char			*ft_utoa(unsigned int n);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+char			*ft_utoa(unsigned int n);
 
 /*
 ** ==== Display Functions ====
 */
-void			ft_putchar(char c);
-void			ft_putstr(char *s);
-void			ft_putnbr(int n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
