@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 12:27:46 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/27 14:42:09 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/28 14:46:52 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	put_pointer(void *nbr, char *base)
 
 	n = (unsigned long)nbr;
 	str = hexadecimal_to_str(n, base);
-	len = ft_strlen(str);
+	len = ft_putstr(str);
 	free(str);
 	return (len);
 }
