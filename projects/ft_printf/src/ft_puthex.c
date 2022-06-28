@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 14:46:29 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/27 14:48:05 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/28 14:46:27 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	put_hex(unsigned int nbr, char *base)
 	char			*str;
 
 	str = hexadecimal_to_str(nbr, base);
-	len = ft_strlen(str);
+	len = ft_putstr(str);
 	free(str);
 	return (len);
 }
