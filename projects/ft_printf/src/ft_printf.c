@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 11:08:42 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/27 12:00:37 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/28 14:44:24 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *format, ...)
 	va_start(ap, format);
 	while (format[i])
 	{
-		if (format[i] == "%" && ft_strchr("sSpdDioOuUxXcC%", format[i + 1]))
+		if (format[i] == '%' && ft_strchr("sSpdDioOuUxXcC%", format[i + 1]))
 		{
 			printed += ft_printf_arg(format, i, ap);
 			i++;
