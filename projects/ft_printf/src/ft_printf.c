@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 11:08:42 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/30 20:20:52 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/30 16:47:21 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libftprintf.h"
+#include <stdio.h>
 
 int	ft_printf_arg(const char *fmt, int i, va_list ap);
 
@@ -40,6 +41,8 @@ int	ft_printf(const char *format, ...)
 
 int	ft_printf_arg(const char *fmt, int i, va_list ap)
 {
+	// void* ptr = 0;
+	
 	if (fmt[i + 1] == '%')
 		return (ft_putchar(fmt[i + 1]));
 	else if (fmt[i + 1] == 's')
@@ -58,7 +61,8 @@ int	ft_printf_arg(const char *fmt, int i, va_list ap)
 			return (put_hex(va_arg(ap, unsigned int), "0123456789abcdef"));
 	}
 	else if (fmt[i + 1] == 'p')
-		return (ft_putstr("0x") + put_pointer(va_arg(ap, void *), "0123456789abcdef"));
+		return (ft_putstr("0x") + put_pointer(va_arg(ap, void *), \
+			"0123456789abcdef"));
 	else
 		return (0);
 }
