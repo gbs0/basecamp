@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
+/*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 11:08:42 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/28 14:44:24 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/06/30 20:20:52 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,7 @@ int	ft_printf_arg(const char *fmt, int i, va_list ap)
 			return (put_hex(va_arg(ap, unsigned int), "0123456789abcdef"));
 	}
 	else if (fmt[i + 1] == 'p')
-		return (ft_putstr("0x") + put_pointer(va_arg(ap, void *), \
-			"0123456789abcdef"));
+		return (ft_putstr("0x") + put_pointer(va_arg(ap, void *), "0123456789abcdef"));
 	else
 		return (0);
 }
