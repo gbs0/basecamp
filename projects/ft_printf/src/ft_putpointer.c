@@ -51,10 +51,20 @@ int	put_pointer(void *nbr, char *base)
 	int				len;
 	char			*str;
 	unsigned long	n;
-	
+	unsigned long 	zero;
+
+	zero = 0;
 	n = (unsigned long)nbr;
-	str = hexadecimal_to_str(n, base);
-	len = ft_putstr(str);
-	free(str);
-	return (len);
+	if (n == zero)
+	{
+		len = ft_putstr("0x0");
+		return (len);
+	}
+	else
+	{
+		str = hexadecimal_to_str(n, base);
+		len = ft_putstr(str);
+		free(str);
+		return (len);
+	}
 }
