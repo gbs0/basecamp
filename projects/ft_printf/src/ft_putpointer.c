@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 12:27:46 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/30 16:32:02 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/07/01 17:54:59 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ int	put_pointer(void *nbr, char *base)
 	n = (unsigned long)nbr;
 	if (n == zero)
 	{
-		len = ft_putstr("0x0");
-		return (len);
+		len = write(1, "0", 1);
+		return (1);
 	}
 	else
 	{
@@ -67,4 +67,14 @@ int	put_pointer(void *nbr, char *base)
 		free(str);
 		return (len);
 	}
+	
+	// int				len;
+	// char			*str;
+	// unsigned long	n;
+
+	// n = (unsigned long)nbr;
+	// str = hexadecimal_to_str(n, base);
+	// len = ft_putstr(str);
+	// free(str);
+	// return (len);
 }
