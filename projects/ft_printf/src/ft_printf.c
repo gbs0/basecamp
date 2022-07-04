@@ -6,7 +6,7 @@
 /*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 11:08:42 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/06/30 22:32:38 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/07/04 23:41:23 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *format, ...)
 	va_start(ap, format);
 	while (format[i])
 	{
-		if (format[i] == '%' && ft_strchr("sSpdDioOuUxXcC%", format[i + 1]))
+		if (format[i] == '%' && ft_strchr("cspdiuxX%", format[i + 1]))
 		{
 			printed += ft_printf_arg(format, i, ap);
 			i++;
@@ -40,6 +40,9 @@ int	ft_printf(const char *format, ...)
 
 int	ft_printf_arg(const char *fmt, int i, va_list ap)
 {
+	// void* ptr;
+
+	// ptr = va_arg(ap, void*);
 	if (fmt[i + 1] == '%')
 		return (ft_putchar(fmt[i + 1]));
 	else if (fmt[i + 1] == 's')
@@ -58,8 +61,14 @@ int	ft_printf_arg(const char *fmt, int i, va_list ap)
 			return (put_hex(va_arg(ap, unsigned int), "0123456789abcdef"));
 	}
 	else if (fmt[i + 1] == 'p')
-	{
-		return (ft_putstr("0x") + put_pointer(va_arg(ap, void *), \
+	{		
+		// if (!ptr)
+		// {
+		// 	ft_putstr("(nil)");
+		// 	return (5);
+		// }
+		// else
+			return (ft_putstr("0x") + put_pointer(va_arg(ap, void*), \
 			"0123456789abcdef"));
 	}
 	else
