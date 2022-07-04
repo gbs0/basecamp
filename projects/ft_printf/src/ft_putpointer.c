@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putpointer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gschiavo <gschiavo@42student.org.br>       +#+  +:+       +#+        */
+/*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 12:27:46 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/07/01 17:54:59 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/07/04 23:28:44 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,30 +51,10 @@ int	put_pointer(void *nbr, char *base)
 	int				len;
 	char			*str;
 	unsigned long	n;
-	unsigned long 	zero;
 
-	zero = 0;
 	n = (unsigned long)nbr;
-	if (n == zero)
-	{
-		len = write(1, "0", 1);
-		return (1);
-	}
-	else
-	{
-		str = hexadecimal_to_str(n, base);
-		len = ft_putstr(str);
-		free(str);
-		return (len);
-	}
-	
-	// int				len;
-	// char			*str;
-	// unsigned long	n;
-
-	// n = (unsigned long)nbr;
-	// str = hexadecimal_to_str(n, base);
-	// len = ft_putstr(str);
-	// free(str);
-	// return (len);
+	str = hexadecimal_to_str(n, base);
+	len = ft_putstr(str);
+	free(str);
+	return (len);
 }
