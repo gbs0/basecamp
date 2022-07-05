@@ -9,8 +9,8 @@ int main(){
     // int ret_orig = printf(" %p %p ", ptr, ptr);
     // int ret_gschiavo = ft_printf("%p %p ", ptr, ptr);
 
-	int ret_orig = printf(" %p ", ptr);
-	int ret_gschiavo = ft_printf(" %p ", ptr);
+	int ret_orig = printf(" %p ", ptr2);
+	int ret_gschiavo = ft_printf(" %p ", ptr2);
 	// printf("%p\n", ptr);
 	// ft_printf("%p\n", ptr);
     
