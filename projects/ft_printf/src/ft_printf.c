@@ -6,13 +6,15 @@
 /*   By: gschiavo <gschiavo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 11:08:42 by gschiavo          #+#    #+#             */
-/*   Updated: 2022/07/04 23:41:23 by gschiavo         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:20:27 by gschiavo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libftprintf.h"
 
 int	ft_printf_arg(const char *fmt, int i, va_list ap);
+
+int	ft_handle_void_pointer(void*args);
 
 int	ft_printf(const char *format, ...)
 {
@@ -40,9 +42,6 @@ int	ft_printf(const char *format, ...)
 
 int	ft_printf_arg(const char *fmt, int i, va_list ap)
 {
-	// void* ptr;
-
-	// ptr = va_arg(ap, void*);
 	if (fmt[i + 1] == '%')
 		return (ft_putchar(fmt[i + 1]));
 	else if (fmt[i + 1] == 's')
@@ -61,16 +60,23 @@ int	ft_printf_arg(const char *fmt, int i, va_list ap)
 			return (put_hex(va_arg(ap, unsigned int), "0123456789abcdef"));
 	}
 	else if (fmt[i + 1] == 'p')
-	{		
-		// if (!ptr)
-		// {
-		// 	ft_putstr("(nil)");
-		// 	return (5);
-		// }
-		// else
-			return (ft_putstr("0x") + put_pointer(va_arg(ap, void*), \
-			"0123456789abcdef"));
-	}
+		return (ft_handle_pointer_void(va_arg(ap, void *)));
 	else
 		return (0);
+}
+
+int	ft_handle_void_pointer(void*args)
+{
+	void	*ptr;
+
+	ptr = args;
+	if (!ptr)
+	{
+		ft_putstr("(nil)");
+		return (5);
+	}
+	else
+	{
+		return (ft_putstr("0x") + put_pointer(ptr, "0123456789abcdef"));
+	}
 }
