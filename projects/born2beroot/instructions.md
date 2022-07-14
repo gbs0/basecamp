@@ -42,9 +42,10 @@ sudo -v
 [sudo] password for <username>: <password>
 ```
 
-#### 3 - Configuring sudo
-Configure sudo via `sudo vi /etc/sudoers.d/<filename>. <filename>` shall not end in ~ or contain .
+#### 3 - Configuring **sudo**
+Configure sudo via `sudo vi /etc/sudoers.d/<filename>. <filename>` shall not end in ~ or contain . This file name represent some custom security policies for sudo.
 `sudo nano /etc/sudoers.d/<filename>`
+
 
 To limit authentication using sudo to 3 attempts (defaults to 3 anyway) in the event of an incorrect password, add below line to the file.
 
@@ -55,5 +56,40 @@ To add a custom error message in the event of an incorrect password:
 • `Defaults        badpass_message="<custom-error-message>"`
 
 
+#### 3.1 - Log **sudo** commands
+To log all sudo commands to /var/log/sudo/<filename>:
 
+`sudo mkdir /var/log/sudo`
+<~~~>
+Defaults        logfile="/var/log/sudo/<filename>"
+<~~~>
 
+To archive all sudo inputs & outputs to /var/log/sudo/:
+
+Defaults        log_input,log_output
+Defaults        iolog_dir="/var/log/sudo"
+
+### 3.2 - Requiring TTY
+To require TTY:
+```
+Defaults        requiretty
+```
+To set sudo paths to `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin`:
+```
+Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+```
+
+#### 4 - User management - Setting Up a Strong Password Policy
+• **Set a password age:**
+In order to set a policy for password expiration, we need to configure this behaviour policy via `sudo vi /etc/login.defs`
+`sudo nano /etc/login.defs`
+
+**Mandatory Requirements**
+• In order to set the password expiracy for every 30 days, we need to replace line 160 with:
+`PASS_MAX_DAYS   30`
+
+• To set minimum number of days between password changes to 2 days:
+`PASS_MIN_DAYS   2`
+
+• To send user a warning message 7 days (defaults to 7 anyway) before password expiry, keep as is
+`PASS_WARN_AGE   7`
