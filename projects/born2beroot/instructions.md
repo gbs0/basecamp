@@ -93,3 +93,19 @@ In order to set a policy for password expiration, we need to configure this beha
 
 • To send user a warning message 7 days (defaults to 7 anyway) before password expiry, keep as is
 `PASS_WARN_AGE   7`
+
+
+#### X - Verify subject requirements [Mandatory]
+Below are two commands for check some of the subject's requirements:
+
+• For check OS version:
+`head -n 2 /etc/os-realease`
+
+• Check if AppArmor is loaded:
+`/usr/sbin/aa-status`
+
+• Check NetID state ports:
+`ss -tunlp`
+
+• Check UFW status and ports:
+`/usr/sbin/ufw status`
