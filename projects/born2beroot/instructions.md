@@ -95,7 +95,19 @@ Allow incoming connections using Port 4242 via sudo ufw allow 4242:
 Check UFW status via sudo ufw status.
 `sudo ufw status`
 
-### 5 - User management - Setting Up a Strong Password Policy
+### 5 - Setting Up a cron Job
+Configure cron as root via sudo crontab -u root -e.
+`sudo crontab -u root -e`
+
+To schedule a shell script to run every 10 minutes, replace below line 
+`23 # m h  dom mon dow   command`
+with:
+`23 */10 * * * * sh /path/to/script`
+
+Check root's scheduled cron jobs via:
+`sudo crontab -u root -l`
+
+### 6 - User management - Setting Up a Strong Password Policy
 • **Set a password age:**
 In order to set a policy for password expiration, we need to configure this behaviour policy via `sudo vi /etc/login.defs`
 `sudo nano /etc/login.defs`
