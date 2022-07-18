@@ -148,6 +148,11 @@ Enable Firewall via:
 Allow incoming connections using Port 4242 via sudo ufw allow 4242:
 `sudo ufw allow 4242`
 
+To remove a specific port rule, use:
+```
+sudo ufw status numbered && sudo ufw delete 8080
+```
+
 Check UFW status via sudo ufw status.
 `sudo ufw status`
 
@@ -223,7 +228,7 @@ Configure password strength policy via `sudo vi /etc/pam.d/common-password`, spe
 ```
 sudo vi /etc/pam.d/common-password
 <~~~>
-25 password        requisite                       pam_pwquality.so retry=3
+ password        requisite                       pam_pwquality.so retry=3
 <~~~>
 ```
 To set password minimum length to 10 characters, add below option to the above line.
@@ -252,7 +257,7 @@ enforce_for_root
 ```
 Finally, it should look like the below:
 ```
-password        requisite                       pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+password        requisite                       pam_pwquality.so retry=3 minlen=10 lcredit=-1 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
 ```
 
 #### 9 - Create New User
@@ -354,7 +359,9 @@ Install *php-cgi* & *php-mysql* via `sudo apt install php-cgi php-mysql`.
 ```
 sudo apt install php-cgi php-mysql
 ```
-Verify whether *php-cgi* & *php-mysql* was successfully installed via `dpkg -l | grep php`.
+Ver
+sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html
+```ify whether *php-cgi* & *php-mysql* was successfully installed via `dpkg -l | grep php`.
 ```
 dpkg -l | grep php
 ```
@@ -365,8 +372,6 @@ Install *wget* via `sudo apt install wget`.
 sudo apt install wget
 ```
 Download WordPress to `/var/www/html` via `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html`.
-```
-sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html
 ```
 Extract downloaded content via `sudo tar -xzvf /var/www/html/latest.tar.gz`.
 ```
