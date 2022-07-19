@@ -54,6 +54,25 @@ sudo -v
 [sudo] password for <username>: <password>
 ```
 
+### 2.1 - Changing hostname
+In order to set a new hostname, just enter:
+```
+sudo hostnamectl set-hostname <username + 42>
+```
+
+Then reboot for persist changes
+
+### 2.2 - Adding group and assing to current user
+To create a group, simple use:
+```
+sudo addgroup <group_name>
+```
+
+Now, we need to assign a existent user to this new group, so just type the following:
+```
+sudo gpasswd -a <username> <group_name>
+```
+
 ### 3 - Configuring **sudo**
 Configure sudo via `sudo vi /etc/sudoers.d/<filename>. <filename>` shall not end in ~ or contain . This file name represent some custom security policies for sudo.
 ```
