@@ -448,6 +448,7 @@ sudo apt-get install unzip wget
 ```
 Then install **ngrok** via wget:
 ```
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 ```
 Next, we need to extract it from terminal, and copy to `usr/local/bin` directory:
 ```
