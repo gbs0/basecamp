@@ -60,7 +60,7 @@ In order to set a new hostname, just enter:
 sudo hostnamectl set-hostname <username + 42>
 ```
 
-Then reboot for persist changes
+Then reboot for persist changes.
 
 ### 2.2 - Adding group and assing to current user
 To create a group, simple use:
@@ -390,7 +390,9 @@ Install *wget* via `sudo apt install wget`.
 ```
 sudo apt install wget
 ```
-Download WordPress to `/var/www/html` via `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html`.
+Download WordPress to `/var/www/html` via:
+```
+sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html.
 ```
 Extract downloaded content via `sudo tar -xzvf /var/www/html/latest.tar.gz`.
 ```
@@ -437,58 +439,34 @@ sudo lighty-enable-mod fastcgi-php
 sudo service lighttpd force-reload
 ```
 
-### #3: File Transfer Protocol *(FTP)*
+### #3: Ngrok Tunnel Service
 
-#### Step 1: Installing & Configuring FTP
-Install FTP via `sudo apt install vsftpd`.
+#### Step 1: Installing & Configuring ngrok
+Install unzip and wget plugins from apt:
 ```
-sudo apt install vsftpd
+sudo apt-get install unzip wget
 ```
-Verify whether *vsftpd* was successfully installed via `dpkg -l | grep vsftpd`.
+Then install **ngrok** via wget:
 ```
-dpkg -l | grep vsftpd
 ```
-Allow incoming connections using Port 21 via `sudo ufw allow 21`.
+Next, we need to extract it from terminal, and copy to `usr/local/bin` directory:
 ```
-sudo ufw allow 21
+sudo tar xvzf ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 ```
-Configure *vsftpd* via `sudo vi /etc/vsftpd.conf`.
+Allow incoming connections using Port 80:
 ```
-sudo vi /etc/vsftpd.conf
+sudo ufw allow 80
 ```
-To enable any form of FTP write command, uncomment below line:
+In order for the service works properly, we need to add a valid ngrok token
 ```
-31 #write_enable=YES
+ngrok config add-authtoken <token>
 ```
-To set root folder for FTP-connected user to `/home/<username>/ftp`, add below lines:
+Now, we need a simple project for init our ngrok service, for purposes of this project I will clone a repository of my own:
 ```
-sudo mkdir /home/<username>/ftp
-sudo mkdir /home/<username>/ftp/files
-sudo chown nobody:nogroup /home/<username>/ftp
-sudo chmod a-w /home/<username>/ftp
-<~~~>
-user_sub_token=$USER
-local_root=/home/$USER/ftp
-<~~~>
+cd /var/www/html && sudo git clone https://github.com/gbs0/me.git profile/
 ```
-To prevent user from accessing files or using commands outside the directory tree, uncomment below line:
+Then, start serving the following page with:
 ```
-114 #chroot_local_user=YES
+ngrok http 80 
 ```
-To whitelist FTP, add below lines:
-```
-sudo vi /etc/vsftpd.userlist
-echo <username> | sudo tee -a /etc/vsftpd.userlist
-<~~~>
-userlist_enable=YES
-userlist_file=/etc/vsftpd.userlist
-userlist_deny=NO
-<~~~>
-```
-
-#### Step 2: Connecting to Server via FTP
-FTP into your virtual machine via `ftp <ip-address>`.
-```
-ftp <ip-address>
-```
-Terminate FTP session at any time via `CTRL + D`.
+**A link will be generated, so simple follow the https://<reference_link>/profile**
