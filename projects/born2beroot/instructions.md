@@ -156,16 +156,24 @@ sudo service ssh status
 
 ### 5 - Installing & Config **Uncomplicated FireWall**
 Install **ufw** via:
-`sudo apt install ufw`
+```
+sudo apt install ufw
+```
 
 Verify whether ufw was successfully installed via dpkg -l | grep ufw.
-`dpkg -l | grep ufw`
+```
+dpkg -l | grep ufw
+```
 
 Enable Firewall via:
-`sudo ufw enable`
+```
+sudo ufw enable
+```
 
 Allow incoming connections using Port 4242 via sudo ufw allow 4242:
-`sudo ufw allow 4242`
+```
+sudo ufw allow 4242
+```
 
 To remove a specific port rule, use:
 ```
@@ -236,17 +244,25 @@ chmod +x monitoring.sh
 ### 8 - User management - Setting Up a Strong Password Policy
 • **Set a password age:**
 In order to set a policy for password expiration, we need to configure this behaviour policy via `sudo vi /etc/login.defs`
-`sudo nano /etc/login.defs`
+```
+sudo nano /etc/login.defs
+```
 
 • **Mandatory Requirements**
 In order to set the password expiracy for every 30 days, we need to replace line 160 with:
-`PASS_MAX_DAYS   30`
+```
+PASS_MAX_DAYS   30
+```
 
 To set minimum number of days between password changes to 2 days:
-`PASS_MIN_DAYS   2`
+```
+PASS_MIN_DAYS   2
+```
 
 To send user a warning message 7 days (defaults to 7 anyway) before password expiry, keep as is
-`PASS_WARN_AGE   7`
+```
+PASS_WARN_AGE   7
+```
 
 • **Password Strength**
 Secondly, to set up policies in relation to password strength, install the *libpam-pwquality* package.
