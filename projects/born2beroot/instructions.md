@@ -135,7 +135,7 @@ with:
 ```
 Port 4242
 ```
-To disable SSH login as *root* irregardless of authentication mechanism, replace below line
+Then, **we need to disable SSH login as *root* ** irregardless of authentication mechanism, replace below line
 ```
 #PermitRootLogin prohibit-password
 ```
