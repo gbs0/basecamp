@@ -198,26 +198,40 @@ logout
 
 ### 7 - Setting Up a cron Job
 Configure cron as root via sudo crontab -u root -e.
-`sudo crontab -u root -e`
+```
+sudo crontab -u root -e
+```
 
 To schedule a shell script to run every 10 minutes, replace below line 
 `# m h  dom mon dow   command`
 with:
-`*/10 * * * * /bin/sh /root/scripts/monitoring.sh`
+```
+*/10 * * * * /bin/sh /root/scripts/monitoring.sh
+```
 
 Check root's scheduled cron jobs via:
-`sudo crontab -u root -l`
+```
+sudo crontab -u root -l
+```
 
 Now, we need to our custom directory to place our cron scripts:
-`cd ../.. && sudo mkdir root/scripts`
+```
+cd ../.. && sudo mkdir root/scripts
+```
 
 Then, create the shell script for your custom actions:
-`sudo touch /root/scripts/monitoring.sh`
+```
+sudo touch /root/scripts/monitoring.sh
+```
 
 Finally, make sure that your script has permission to be executed, running:
-`chmod +x /root/scripts/monitoring.sh`
-
-Now write the shell script with you own paramenters.
+```
+chmod +x /root/scripts/monitoring.sh
+```
+Now write the shell script with you own paramenters. Then, **make sure** about file permission running:
+```
+chmod +x monitoring.sh
+```
 
 ### 8 - User management - Setting Up a Strong Password Policy
 • **Set a password age:**
@@ -254,9 +268,9 @@ To set password minimum length to 10 characters, add below option to the above l
 ```
 minlen=10
 ```
-To require password to contain at least an uppercase character and a numeric character:
+To require password to contain at least an uppercase character, a numeric character and a lowercase character:
 ```
-ucredit=-1 dcredit=-1
+ucredit=-1 dcredit=-1 lcredit=-1
 ```
 To set a maximum of 3 consecutive identical characters:
 ```
@@ -279,22 +293,20 @@ Finally, it should look like the below:
 password        requisite                       pam_pwquality.so retry=3 minlen=10 lcredit=-1 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
 ```
 
-#### 9 - Create New User
-
-#### 10 - Verify subject requirements [Mandatory]
+#### 9 - Verify subject requirements [Mandatory]
 Below are two commands for check some of the subject's requirements:
 
 • For check OS version:
-`head -n 2 /etc/os-realease`
+```head -n 2 /etc/os-realease```
 
 • Check if AppArmor is loaded:
-`/usr/sbin/aa-status`
+```/usr/sbin/aa-status```
 
 • Check NetID state ports:
-`ss -tunlp`
+```ss -tunlp```
 
 • Check UFW status and ports:
-`/usr/sbin/ufw status`
+```/usr/sbin/ufw status```
 
 ### Bonus Part
 
